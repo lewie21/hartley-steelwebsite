@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hartley Steel | Premium Fabrication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { 
+            --gold: #c5a059; 
+            --dark: #121212; 
+            --grey: #1e1e1e; 
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: var(--dark); 
+            color: #e0e0e0; 
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 0 5%; 
+            background: rgba(0,0,0,0.95); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000;
+            height: 80px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .contact-info {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .logo-box { 
+            height: 60px; /* Constrained height for the top-right corner */
+            width: auto;
+        }
+
+        .logo-box img {
+            height: 100%;
+            width: auto;
+            display: block;
+        }
+
+        /* HERO SECTION */
+        .hero { 
+            height: 75vh; 
+            display: flex; 
+            align-items: center; 
+            padding: 0 10%;
+            margin-top: 80px; 
+            /* Background Image with Dark Overlay */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('welder.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        /* WORK SECTION */
+        .section { 
+            padding: 80px 10%; 
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--gold);
+            margin-bottom: 50px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+        }
+
+        .work-card { 
+            background: var(--grey); 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-bottom: 3px solid transparent; 
+            transition: 0.3s ease; 
+        }
+
+        .work-card:hover { 
+            border-bottom: 3px solid var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .work-card img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+            border-radius: 4px; 
+        }
+
+        .work-card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        /* FORM SECTION */
+        .quote-section {
+            background: #080808;
+            padding: 80px 10%;
+        }
+
+        .form-box { 
+            background: var(--grey); 
+            padding: 40px; 
+            border: 1px solid var(--gold); 
+            max-width: 650px; 
+            margin: 0 auto; 
+        }
+
+        input, textarea { 
+            width: 100%; 
+            padding: 15px; 
+            margin-bottom: 20px; 
+            background: #252525; 
+            border: 1px solid #444; 
+            color: white; 
+            font-family: inherit;
+        }
+
+        .btn { 
+            background: var(--gold); 
+            color: black; 
+            padding: 18px; 
+            border: none; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer; 
+            width: 100%; 
+            transition: 0.3s; 
+        }
+
+        .btn:hover { 
+            background: #d4b475; 
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #777;
+            background: var(--dark);
+        }
+
+        /* MOBILE FIXES */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            nav { padding: 0 20px; }
+            .contact-info { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="contact-info">
+            <i class="fas fa-phone"></i> +263 772 591 652
+        </div>
+        
+        <div class="logo-box">
+            <img src="Logo.png" alt="Hartley Steel Logo">
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Steel <br><span>Fabrication</span></h1>
+            <p>Kadoma's leader in structural and decorative metalwork. Quality you can trust, durability you can see.</p>
+           
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Work In Progress</h2>
+        <div class="grid">
+
+            <div class="work-card">
+                <img src="gate03.jpeg" alt="Industrial Gates">
+                <h3>Industrial Gates</h3>
+                <p>Heavy-duty security for commercial properties and estates.</p>
+            </div>
+
+            <div class="work-card">
+                <img src="window01.jpeg" alt="Custom Window Frames">
+                <h3>Custom Window Frames</h3>
+                 <p>Precision-cut steel for modern homes.</p>
+            </div>
+
+            <div class="work-card">
+                <img src="wall-fence.jpeg" alt="structural walll-fence">
+                <h3>Strctured-fence</h3>
+                <p>High-tensile strength for security.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" style="background:#000;">
+        <h2 style="text-align:center; margin-bottom:30px;">Request a Quote</h2>
+        <div class="form-box">
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="5" placeholder="Tell us about your project (Dimensions, Location, Material...)"></textarea>
+                <button type="submit" class="btn">SUBMIT REQUEST</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="padding:40px; text-align:center; font-size: 0.8rem; color:#666;">
+        &copy; 2026 HARTLEY STEEL FABRICATION | 03 Mufakosi Rimuka Kadoma
+    </footer>
+
+</body>
+</html>
